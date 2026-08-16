@@ -4,20 +4,31 @@ import TopBar from "./components/TopBar";
 
 export const dynamic = "force-dynamic";
 
+function normalizeSearchText(value) {
+  return String(value || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/\u0111/g, "d")
+    .replace(/\u0110/g, "d")
+    .toLowerCase()
+    .trim();
+}
+
+function matchesSearch(person, query) {
+  const terms = normalizeSearchText(query).split(/\s+/).filter(Boolean);
+  if (terms.length === 0) return true;
+
+  const searchableText = normalizeSearchText(`${person.name} ${person.services}`);
+  return terms.every((term) => searchableText.includes(term));
+}
+
 export default async function HomePage({ searchParams }) {
   const q = (searchParams?.q || "").trim();
 
   const people = await prisma.person.findMany({
-    where: q
-      ? {
-          OR: [
-            { name: { contains: q } },
-            { services: { contains: q } },
-          ],
-        }
-      : undefined,
     orderBy: [{ order: "asc" }, { createdAt: "asc" }],
   });
+  const matchingPeople = q ? people.filter((person) => matchesSearch(person, q)) : people;
 
   return (
     <>
@@ -71,7 +82,7 @@ export default async function HomePage({ searchParams }) {
 
       <div className="container" style={{ paddingBottom: 64 }}>
         <div className="directory-panel">
-          {people.length === 0 ? (
+          {matchingPeople.length === 0 ? (
             <div className="empty-state">
               {q
                 ? `Không tìm thấy admin nào khớp với "${q}".`
@@ -79,7 +90,7 @@ export default async function HomePage({ searchParams }) {
             </div>
           ) : (
             <div className="grid">
-              {people.map((p, i) => (
+              {matchingPeople.map((p, i) => (
                 <Link key={p.id} href={`/${p.slug}`} className="person-card">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img

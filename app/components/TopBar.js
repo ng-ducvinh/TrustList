@@ -15,7 +15,7 @@ export default function TopBar() {
           </span>
         </Link>
         <nav className="topbar-links" aria-label="Main navigation">
-          <a href="https://zalo.me/trustlist" target="_blank" rel="noreferrer">
+          <a href="https://t.me/ngducvinh" target="_blank" rel="noreferrer">
             Liên hệ quản lý
           </a>
           <Link href="/noi-quy-giao-dich">Nội quy giao dịch</Link>
