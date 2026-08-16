@@ -1,0 +1,34 @@
+// Prisma schema
+// Default datasource targets Postgres (works out of the box with Vercel Postgres / Neon).
+// For local dev without a Postgres server, you can switch provider to "sqlite" and
+// set DATABASE_URL="file:./dev.db" in .env — see README.md.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Person {
+  id               String   @id @default(cuid())
+  slug             String   @unique
+  name             String
+  avatarUrl        String?
+  facebookUrl      String?
+  shopBioUrl       String?
+  telegramUrl      String?
+  supportLevel     String   @default("Xuất sắc")
+  profileTier      String   @default("Đồng")
+  trustScore       Int      @default(100)
+  trustScoreMax    Int      @default(100)
+  joinDate         String?
+  transactionLimit String   @default("dưới 10 triệu")
+  services         String   @default("")
+  bankAccounts     String   @default("[]")
+  order            Int      @default(0)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+}
