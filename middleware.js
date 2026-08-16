@@ -29,6 +29,10 @@ export async function middleware(request) {
     return NextResponse.next();
   }
 
+  if (pathname === "/admin/login") {
+    return NextResponse.next();
+  }
+
   const sessionCookie = request.cookies.get("cs_admin_session")?.value;
   const hasSession = Boolean(sessionCookie);
   const ip = request.ip || request.headers.get("x-forwarded-for") || "unknown";
