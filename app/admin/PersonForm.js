@@ -105,6 +105,18 @@ export default function PersonForm({ action, initial }) {
           <input name="facebookUrl" defaultValue={initial?.facebookUrl} placeholder="https://facebook.com/..." />
         </div>
         <div className="field">
+          <label>Zalo</label>
+          <input name="zaloUrl" defaultValue={initial?.zaloUrl} placeholder="https://zalo.me/..." />
+        </div>
+        <div className="field">
+          <label>Số điện thoại</label>
+          <input name="phoneNumber" type="tel" defaultValue={initial?.phoneNumber} placeholder="VD: 0901234567" />
+        </div>
+        <div className="field">
+          <label>TikTok</label>
+          <input name="tiktokUrl" defaultValue={initial?.tiktokUrl} placeholder="https://www.tiktok.com/@..." />
+        </div>
+        <div className="field">
           <label>Link Bio Shop</label>
           <input name="shopBioUrl" defaultValue={initial?.shopBioUrl} placeholder="https://..." />
         </div>

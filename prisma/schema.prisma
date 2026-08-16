@@ -18,8 +18,11 @@ model Person {
   name             String
   avatarUrl        String?
   facebookUrl      String?
+  zaloUrl          String?
   shopBioUrl       String?
   telegramUrl      String?
+  phoneNumber      String?
+  tiktokUrl        String?
   supportLevel     String   @default("Xuất sắc")
   profileTier      String   @default("Đồng")
   trustScore       Int      @default(100)

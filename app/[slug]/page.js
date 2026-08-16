@@ -77,6 +77,36 @@ export default async function ProfilePage({ params }) {
               </a>
             </div>
           )}
+          {person.zaloUrl && (
+            <div className="info-row">
+              <strong>Zalo:</strong>
+              <a href={person.zaloUrl} target="_blank" rel="noopener noreferrer">
+                Liên hệ Zalo
+              </a>
+            </div>
+          )}
+          {person.telegramUrl && (
+            <div className="info-row">
+              <strong>Telegram:</strong>
+              <a href={person.telegramUrl} target="_blank" rel="noopener noreferrer">
+                Liên hệ Telegram
+              </a>
+            </div>
+          )}
+          {person.phoneNumber && (
+            <div className="info-row">
+              <strong>Số điện thoại:</strong>
+              <a href={`tel:${person.phoneNumber}`}>{person.phoneNumber}</a>
+            </div>
+          )}
+          {person.tiktokUrl && (
+            <div className="info-row">
+              <strong>TikTok:</strong>
+              <a href={person.tiktokUrl} target="_blank" rel="noopener noreferrer">
+                Xem TikTok
+              </a>
+            </div>
+          )}
           {person.shopBioUrl && (
             <div className="info-row">
               <strong>Bio Shop:</strong>
@@ -85,7 +115,7 @@ export default async function ProfilePage({ params }) {
               </a>
             </div>
           )}
-          {!person.facebookUrl && !person.shopBioUrl && (
+          {!person.facebookUrl && !person.zaloUrl && !person.telegramUrl && !person.phoneNumber && !person.tiktokUrl && !person.shopBioUrl && (
             <div className="info-row">Chưa cập nhật.</div>
           )}
         </div>

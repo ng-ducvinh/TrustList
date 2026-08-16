@@ -13,7 +13,7 @@ export default function RulesPage() {
           <h1>NỘI QUY GIAO DỊCH</h1>
 
           <h2>
-            <a href="https://zalo.me/trustlist" target="_blank" rel="noreferrer">
+            <a href="https://t.me/ngducvinh" target="_blank" rel="noreferrer">
               LIÊN HỆ QUẢN LÝ
             </a>
           </h2>
@@ -33,7 +33,7 @@ export default function RulesPage() {
             <li>Nếu bạn bị kích khỏi nhóm trong khi giao dịch, hãy liên hệ ngay với admin qua Zalo hoặc Facebook có gắn trên link hồ sơ xác minh.</li>
             <li>Không xử lý các vấn đề của web Gạch thẻ, Like sub (2 web dạng này có nhiều thứ cần check, time đợi và xử lý bên trong nên TrustList sẽ không xử lý).</li>
             <li>Nghiêm cấm thêm người thứ 4, out box, kích, đổi tên box, sửa chát, tạo nhiều box. Đây được xác định là hành vi gây khó khăn, gian lận trong giao dịch.</li>
-            <li>Giao dịch sòng phẳng, không Spam Box, không phốt khi chưa giải quyết rõ ràng. Quá 48h mà các Ad không rep box hay không xử lý, hãy <a href="https://zalo.me/trustlist" target="_blank" rel="noreferrer">Liên hệ quản lý</a> để được hỗ trợ.</li>
+            <li>Giao dịch sòng phẳng, không Spam Box, không phốt khi chưa giải quyết rõ ràng. Quá 48h mà các Ad không rep box hay không xử lý, hãy <a href="https://t.me/ngducvinh" target="_blank" rel="noreferrer">Liên hệ quản lý</a> để được hỗ trợ.</li>
             <li>TrustList không xử lý giao dịch bắc cầu, Gdv cọc admin, vay nợ lãi…… Website chỉ hỗ trợ xác minh uy tín khi bạn trực tiếp giao dịch với những thông tin, dịch vụ mua bán có đăng ký trong link hồ sơ xác minh của TrustList. Giao dịch với Admin CS đồng nghĩa với việc bạn đồng ý “khi có vấn đề tranh chấp xảy ra giữa Người bán & Người mua thì CS sẽ là người phân xử và có 100% quyền quyết định đúng sai và đưa ra phương án giải quyết cuối cùng”. Phải chắc chắn rằng bạn đang giao dịch với đúng Facebook và thông tin của Admin gắn trên link hồ sơ xác minh <a href="https://trustlist.vn/" target="_blank" rel="noreferrer">https://trustlist.vn/</a>. TrustList sẽ không hỗ trợ xử lý nếu bạn giao dịch với Fake.</li>
             <li>Trường hợp phát sinh giao dịch có dấu hiệu vi phạm từ Admin, khuyến nghị giao dịch đã ghi nhận trên hồ sơ uy tín của Admin đó sẽ được hệ thống xem xét xử lý theo quy định như sau:</li>
           </ol>
